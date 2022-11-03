@@ -7,4 +7,4 @@ def index_view(request):
     URL: /
     this view is for the static landing page.
     """
-    return render(request, 'base.html', None);
+    return render(request, 'user/index.html', None);
