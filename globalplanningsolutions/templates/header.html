@@ -13,11 +13,24 @@
                 Bookings
             </a>
         </li>
+        {% if user.is_authenticated %}
         <li class="pure-menu-item">
             <a href="#" class="pure-menu-link">
                My Account
             </a>
         </li>
+        <li class="pure-menu-item">
+            <a href="#" class="pure-menu-link">
+               Logout
+            </a>
+        </li>
+        {% else %}
+        <li class="pure-menu-item">
+            <a href="{% url 'login' %}" class="pure-menu-link">
+                Login
+            </a>
+        </li>
+        {% endif %}
      </li>
     </ul>
 </div>
