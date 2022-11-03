@@ -18,11 +18,16 @@
     <body>
 
         <body>
-            {% include 'header.html' %}
-
-        {% block body %}
-        No body specified in base template!
-        {% endblock %}
+        {% include 'header.html' %}
+        <div class="pure-g"> 
+            <div class="pure-u-1-5"></div>
+            <div class="pure-u-3-5">
+            {% block body %}
+            No body specified in base template!
+            {% endblock %}
+            </div>
+            <div class="pure-u-1-5"></div>
+        </div>
 
         </body>
 </html>
