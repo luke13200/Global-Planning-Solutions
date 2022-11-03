@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+<form method="POST" action="{% url 'login' %}" class="pure-form pure-form-aligned">
+    {% csrf_token %}
+    <fieldset>
+        <div class="pure-control-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Username" />
+        </div>
+        <div class="pure-control-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Password" />
+        </div>
+        <div class="pure-controls">
+            <button type="submit" class="pure-button pure-button-primary">Login</button>
+        </div>
+    </fieldset>
+</form>
