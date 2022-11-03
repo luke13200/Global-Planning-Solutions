@@ -1,4 +1,6 @@
 {% extends 'base.html' %}
+
+{% block body %}
 <form method="POST" action="{% url 'login' %}" class="pure-form pure-form-aligned">
     {% csrf_token %}
     <fieldset>
@@ -8,10 +10,11 @@
         </div>
         <div class="pure-control-group">
             <label for="password">Password</label>
-            <input type="password" id="password" placeholder="Password" />
+            <input type="password" id="password" name="password" placeholder="Password" />
         </div>
         <div class="pure-controls">
             <button type="submit" class="pure-button pure-button-primary">Login</button>
         </div>
     </fieldset>
 </form>
+{% endblock %}
